@@ -10,13 +10,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def automated_data_analysis(data_path):
-    # Load data into a DataFrame with the correct delimiter (or let pandas detect it)
+    # Load data into a DataFrame with the correct delimiter or pandas detect it
     df = pd.read_csv(data_path)
 
     # Print column names
     print("Column Names:", df.columns)
 
-    # Perform data cleaning (simplified for illustration)
+    # Perform data cleaning
     df = df.dropna()
 
     # Convert 'Date' column to datetime format
@@ -39,7 +39,7 @@ def automated_data_analysis(data_path):
     plt.ylabel('Volume')
     plt.show()
 
-    # Perform statistical analysis (simplified for illustration)
+    # Perform statistical analysis
     correlation_coefficient = np.corrcoef(df['Date'], df['Volume'])[0, 1]
 
     # Output results
@@ -49,7 +49,6 @@ def automated_data_analysis(data_path):
     print("\nCorrelation Coefficient:")
     print(correlation_coefficient)
 
-    # Additional analysis and features can be added based on project requirements
 
 # Example usage of the function
 data_file_path = 'C:/Users/Student.BGPN4275/Desktop/HistoricalData_1701090563642.csv'
